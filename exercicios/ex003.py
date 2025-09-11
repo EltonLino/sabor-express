@@ -49,3 +49,33 @@ num = int(input('Digite um número para ver a tabuada: '))
 for i in range (1,11):
     print(f'{num} x {i} = {num*i}')
 
+#Exercicio 06
+num_lista = []
+soma = 0
+try:
+    for i in range(5):
+        num_add = int(input('Digite um número para adicionar na lista (ou digite -1 para sair): '))
+        if num_add == -1:
+            break
+        num_lista.append(num_add)
+    for numero in num_lista:
+        soma += numero
+    print(f'A soma dos números na lista é: {soma}')
+except ValueError:
+    print('Por favor, insira apenas números inteiros válidos.')
+
+#Exercicio 07
+num_lista_media = []
+soma_media = 0
+try:
+    for i in range(5):
+        num_add_med = int(input('Digite um número para adicionar na lista (ou digite -1 para sair): '))
+        if num_add_med == -1:
+            break
+        num_lista_media.append(num_add_med)
+    for numero in num_lista_media:
+        soma_media += numero
+    media_final = soma_media / len(num_lista_media)
+    print(f'A média dos números na lista é: {media_final}')
+except ValueError:
+    print('Por favor, insira apenas números inteiros válidos.')
